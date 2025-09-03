@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Dark Mode Everywhere",
+  "description": "Force dark mode on any website with per-site controls and custom themes.",
+  "version": "1.0.0",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "Dark Mode Everywhere",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "commands": {
+    "toggle-dark-mode": {
+      "suggested_key": { "default": "Alt+D", "mac": "Alt+D" },
+      "description": "Toggle Dark Mode on the current site"
+    }
+  }
+}

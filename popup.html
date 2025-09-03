@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Dark Mode Everywhere</title>
+  <link rel="stylesheet" href="styles/tailwind-lite.css">
+  <link rel="stylesheet" href="styles/popup.css">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline';">
+</head>
+<body class="bg-slate-900 text-slate-100 p-4 w-[360px]">
+  <header class="flex items-center justify-between mb-3">
+    <h1 class="text-lg font-semibold">Dark Mode Everywhere</h1>
+    <button id="toggleBtn" class="px-3 py-1 rounded bg-slate-800 border border-slate-700 text-sm">Toggle</button>
+  </header>
+
+  <div id="host" class="text-slate-300 text-sm mb-3">Site: …</div>
+
+  <div class="space-y-3">
+    <label class="flex items-center justify-between bg-slate-800 border border-slate-700 p-2 rounded">
+      <span>Enable on this site</span>
+      <input id="enableSite" type="checkbox" class="h-4 w-4">
+    </label>
+
+    <fieldset class="bg-slate-800 border border-slate-700 rounded p-3 space-y-3">
+      <legend class="text-sm text-slate-300">Theme</legend>
+
+      <div class="grid grid-cols-2 gap-3">
+        <label class="text-sm">Background
+          <input id="bg" type="color" class="w-full h-9 mt-1 rounded border border-slate-700" value="#121212">
+        </label>
+        <label class="text-sm">Text
+          <input id="text" type="color" class="w-full h-9 mt-1 rounded border border-slate-700" value="#e5e7eb">
+        </label>
+        <label class="text-sm">Links
+          <input id="link" type="color" class="w-full h-9 mt-1 rounded border border-slate-700" value="#93c5fd">
+        </label>
+        <label class="text-sm">Accent
+          <input id="accent" type="color" class="w-full h-9 mt-1 rounded border border-slate-700" value="#ef4444">
+        </label>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3">
+        <label class="text-sm">Brightness
+          <input id="brightness" type="range" min="0.5" max="1.3" step="0.05" value="1" class="w-full mt-1">
+        </label>
+        <label class="text-sm">Contrast
+          <input id="contrast" type="range" min="0.8" max="1.5" step="0.05" value="1.05" class="w-full mt-1">
+        </label>
+      </div>
+
+      <label class="text-sm block">Font
+        <select id="font" class="w-full mt-1 bg-slate-900 border border-slate-700 rounded p-2">
+          <option value="system-ui">System (Default)</option>
+          <option value="Inter, system-ui, sans-serif">Inter</option>
+          <option value="Segoe UI, system-ui, sans-serif">Segoe UI</option>
+          <option value="Roboto, system-ui, sans-serif">Roboto</option>
+          <option value="Georgia, serif">Georgia (Serif)</option>
+          <option value="Menlo, Consolas, monospace">Monospace</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <div class="flex gap-2">
+      <button id="save" class="flex-1 bg-slate-700 hover:bg-slate-600 rounded px-3 py-2 border border-slate-600">Save</button>
+      <button id="reset" class="flex-1 bg-slate-800 hover:bg-slate-700 rounded px-3 py-2 border border-slate-700">Reset</button>
+    </div>
+
+    <a href="options.html" target="_blank" class="block text-center text-sm text-slate-300 underline mt-1">Open Options</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
