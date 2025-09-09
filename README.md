@@ -1,7 +1,7 @@
-# Dark Mode Everywhere  
+# Nocturne  
 
 ## About  
-Dark Mode Everywhere is a Chrome extension that forces dark mode on all websites, even those without built-in themes. It helps reduce eye strain and creates a consistent, comfortable browsing experience — perfect for students, developers, and night readers.  
+Nocturne is a Chrome extension that lets you apply **custom themes** to all websites — not just dark mode. You can choose dark, light, sepia, or your own background and text colors to personalize your browsing. It helps reduce eye strain and creates a consistent, comfortable browsing experience — perfect for students, developers, and night readers.  
 
 ---
 
@@ -9,23 +9,24 @@ Dark Mode Everywhere is a Chrome extension that forces dark mode on all websites
 The extension follows a simple Chrome Extension structure:  
 
 - **`manifest.json`** → Defines extension metadata, permissions, and entry points.  
-- **Popup (`popup.html` + `popup.js`)** → Small UI for toggling dark mode.  
-- **Content Script (`content.js`)** → Injected into websites to apply CSS filters for dark mode.  
-- **Chrome Storage API** → Saves your dark mode preference across sessions.  
+- **Popup (`popup.html` + `popup.js`)** → Small UI for toggling dark mode or selecting custom colors.  
+- **Content Script (`content.js`)** → Injected into websites to apply CSS filters and theme rules.  
+- **Chrome Storage API** → Saves your theme preferences across sessions.  
 
 **Flow:**  
 1. User clicks the toolbar icon.  
-2. Popup sends a message to the content script.  
-3. Content script applies or removes dark mode CSS.  
+2. Popup sends a message with the selected theme to the content script.  
+3. Content script applies background/text color rules.  
 4. User preference is stored for the next visit.  
 
 ---
 
 ## Why It’s Useful  
 - Works on all websites  
+- Not limited to dark mode → choose any color scheme  
 - Lightweight and fast  
-- Saves your preference automatically  
-- Reduces eye strain during late-night browsing  
+- Saves your preferences automatically  
+- Reduces eye strain and personalizes browsing  
 
 ---
 
