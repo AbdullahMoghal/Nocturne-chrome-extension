@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Dark Mode Everywhere",
+  "name": "Nocturne",
   "description": "Go beyond dark mode. Customize each website with your own background shades and text colors to match your style, mood, or workflow — all with one lightweight extension."
   "version": "1.0.1",
 
@@ -35,4 +35,5 @@
     }
   }
 }
+
 
