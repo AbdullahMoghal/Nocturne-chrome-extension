@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Dark Mode Everywhere",
-  "description": "Force dark mode on any website with per-site controls and custom themes.",
+  "description": "Go beyond dark mode. Customize each website with your own background shades and text colors to match your style, mood, or workflow — all with one lightweight extension."
   "version": "1.0.1",
 
   "icons": {
@@ -35,3 +35,4 @@
     }
   }
 }
+
